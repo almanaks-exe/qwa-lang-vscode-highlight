@@ -1,0 +1,77 @@
+{
+  "scopeName": "source.qwa",
+  "fileTypes": ["qwa"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#numbers" },
+    { "include": "#strings" },
+    { "include": "#identifiers" },
+    { "include": "#special" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.hash.qwa", "match": "#.*$" }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.qwa",
+          "match": "\\b(fn|for|in|let|const|global|private)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.qwa",
+          "match": "\\b(int|float|string|char|list|matrix|dict|any|time|vector)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.qwa", "match": "\\b\\d+(?:\\.\\d+)?\\b" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.qwa",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.qwa", "match": "\\\\." }
+          ]
+        },
+        {
+          "name": "string.quoted.single.qwa",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            { "name": "constant.character.escape.qwa", "match": "\\\\." }
+          ]
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.qwa",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+        }
+      ]
+    },
+    "special": {
+      "patterns": [
+        {
+          "name": "support.function.console.qwa",
+          "match": "con<[^>]+>"
+        }
+      ]
+    }
+  }
+}

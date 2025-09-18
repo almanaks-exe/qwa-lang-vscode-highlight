@@ -1,0 +1,28 @@
+{
+  "name": "qwa",
+  "displayName": "Qwa Language Support",
+  "description": "Syntax highlighting and tools for Qwa language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "qwa",
+        "aliases": ["Qwa", "qwa"],
+        "extensions": [".qwa"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "qwa",
+        "scopeName": "source.qwa",
+        "path": "./syntaxes/qwa.tmLanguage.json"
+      }
+    ]
+  },
+  "icon": "qwa-icon.png"
+}
